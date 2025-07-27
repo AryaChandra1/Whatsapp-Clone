@@ -124,10 +124,16 @@ export default function WhatsAppHome() {
       <StatusBar barStyle="light-content" backgroundColor="#075E54" />
       
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>WhatsApp AI</Text>
+        <Text style={styles.headerTitle}>Chats</Text>
         <View style={styles.headerActions}>
           <TouchableOpacity style={styles.headerButton}>
-            <Text style={styles.headerButtonText}>⚙️</Text>
+            <Ionicons name="camera-outline" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.headerButton}>
+            <Ionicons name="search-outline" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.headerButton}>
+            <Ionicons name="ellipsis-vertical" size={24} color="#FFFFFF" />
           </TouchableOpacity>
         </View>
       </View>
