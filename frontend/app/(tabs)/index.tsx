@@ -12,6 +12,7 @@ import {
   TextInput,
   ScrollView,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import { router } from 'expo-router';
 import Constants from 'expo-constants';
