@@ -291,9 +291,9 @@ const styles = StyleSheet.create({
   },
   filterPill: {
     backgroundColor: '#F2F2F7',
-    borderRadius: 20,
-    paddingHorizontal: 16,
-    paddingVertical: 8,
+    borderRadius: 16,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
     marginRight: 8,
   },
   activeFilterPill: {
