@@ -27,7 +27,6 @@ export default function TabLayout() {
           paddingTop: 8,
         },
         tabBarLabelStyle: {
-          fontFamily: 'SF-Pro-Display-Medium',
           fontSize: 10,
           fontWeight: '500',
         },
