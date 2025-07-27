@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F2F7',
     borderRadius: 16,
     paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingVertical: 4,
     marginRight: 8,
   },
   activeFilterPill: {
