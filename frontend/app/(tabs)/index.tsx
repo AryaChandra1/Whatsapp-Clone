@@ -282,6 +282,12 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 17,
     color: '#000000',
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
+  },
+  filtersContainer: {
+    flex: 1,
+    fontSize: 17,
+    color: '#000000',
   },
   filtersContainer: {
     paddingHorizontal: 16,
