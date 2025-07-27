@@ -72,9 +72,14 @@ export default function WhatsAppHome() {
     <TouchableOpacity
       style={styles.chatItem}
       onPress={() => router.push(`/chat/${item.id}?name=${item.name}&personality=${item.ai_personality}`)}
+      activeOpacity={0.7}
     >
       <View style={styles.avatarContainer}>
-        <Image source={{ uri: item.avatar }} style={styles.avatar} />
+        <Image 
+          source={{ uri: item.avatar }} 
+          style={styles.avatar} 
+          defaultSource={require('../assets/favicon.png')}
+        />
         {item.last_seen === 'online' && <View style={styles.onlineIndicator} />}
       </View>
       
