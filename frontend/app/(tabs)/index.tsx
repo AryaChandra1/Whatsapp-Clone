@@ -303,7 +303,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#25D366',
   },
   filterText: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '500',
     color: '#000000',
     fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
