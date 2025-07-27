@@ -8,11 +8,11 @@ import {
   SafeAreaView,
   StatusBar,
   Image,
-  TextInput,
   Alert,
 } from 'react-native';
 import { router } from 'expo-router';
 import Constants from 'expo-constants';
+import { Ionicons } from '@expo/vector-icons';
 
 const EXPO_PUBLIC_BACKEND_URL = Constants.expoConfig?.extra?.EXPO_PUBLIC_BACKEND_URL || process.env.EXPO_PUBLIC_BACKEND_URL;
 
