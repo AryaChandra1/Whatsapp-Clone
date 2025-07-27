@@ -390,6 +390,7 @@ const styles = StyleSheet.create({
     color: '#8E8E93',
     flex: 1,
     lineHeight: 20,
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   unreadChatMessage: {
     color: '#000000',
