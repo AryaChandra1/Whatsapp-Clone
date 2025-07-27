@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   filterPill: {
     backgroundColor: '#F2F2F7',
     borderRadius: 16,
-    paddingHorizontal: 18,
+    paddingHorizontal: 8,
     paddingVertical: 4,
     marginRight: 8,
   },
@@ -370,6 +370,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: '#000000',
     letterSpacing: -0.2,
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   unreadChatName: {
     fontWeight: '600',
