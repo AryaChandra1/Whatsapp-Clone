@@ -107,7 +107,6 @@ const styles = StyleSheet.create({
   badgeText: {
     color: '#FFFFFF',
     fontSize: 12,
-    fontFamily: 'SF-Pro-Display-Medium',
     fontWeight: '600',
   },
 });
