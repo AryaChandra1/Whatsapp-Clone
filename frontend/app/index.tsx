@@ -77,8 +77,7 @@ export default function WhatsAppHome() {
       <View style={styles.avatarContainer}>
         <Image 
           source={{ uri: item.avatar }} 
-          style={styles.avatar} 
-          defaultSource={require('../assets/favicon.png')}
+          style={styles.avatar}
         />
         {item.last_seen === 'online' && <View style={styles.onlineIndicator} />}
       </View>
