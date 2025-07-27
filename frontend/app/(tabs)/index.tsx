@@ -279,7 +279,6 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     fontSize: 17,
-    fontFamily: 'SF-Pro-Display-Regular',
     color: '#000000',
   },
   filtersContainer: {
@@ -302,7 +301,6 @@ const styles = StyleSheet.create({
   },
   filterText: {
     fontSize: 15,
-    fontFamily: 'SF-Pro-Display-Medium',
     fontWeight: '500',
     color: '#000000',
   },
@@ -317,7 +315,6 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 16,
-    fontFamily: 'SF-Pro-Display-Regular',
     color: '#666',
     marginTop: 16,
   },
@@ -366,18 +363,15 @@ const styles = StyleSheet.create({
   },
   chatName: {
     fontSize: 17,
-    fontFamily: 'SF-Pro-Display-Regular',
     fontWeight: '400',
     color: '#000000',
     letterSpacing: -0.2,
   },
   unreadChatName: {
-    fontFamily: 'SF-Pro-Display-Semibold',
     fontWeight: '600',
   },
   chatTime: {
     fontSize: 15,
-    fontFamily: 'SF-Pro-Display-Regular',
     color: '#8E8E93',
     fontWeight: '400',
   },
@@ -388,14 +382,12 @@ const styles = StyleSheet.create({
   },
   chatMessage: {
     fontSize: 15,
-    fontFamily: 'SF-Pro-Display-Regular',
     color: '#8E8E93',
     flex: 1,
     lineHeight: 20,
   },
   unreadChatMessage: {
     color: '#000000',
-    fontFamily: 'SF-Pro-Display-Medium',
     fontWeight: '500',
   },
   unreadBadge: {
@@ -411,7 +403,6 @@ const styles = StyleSheet.create({
   unreadText: {
     color: '#FFFFFF',
     fontSize: 13,
-    fontFamily: 'SF-Pro-Display-Semibold',
     fontWeight: '600',
   },
 });

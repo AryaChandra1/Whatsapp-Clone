@@ -25,14 +25,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 34,
-    fontFamily: 'SF-Pro-Display-Bold',
     fontWeight: '700',
     color: '#000000',
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 17,
-    fontFamily: 'SF-Pro-Display-Regular',
     color: '#8E8E93',
   },
 });
