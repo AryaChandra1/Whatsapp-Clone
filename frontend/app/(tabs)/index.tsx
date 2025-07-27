@@ -249,7 +249,6 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 34,
-    fontFamily: 'SF-Pro-Display-Bold',
     fontWeight: '700',
     color: '#000000',
     letterSpacing: -0.5,
