@@ -306,6 +306,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '500',
     color: '#000000',
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   activeFilterText: {
     color: '#FFFFFF',
