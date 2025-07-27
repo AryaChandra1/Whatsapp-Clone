@@ -379,6 +379,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#8E8E93',
     fontWeight: '400',
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   chatPreview: {
     flexDirection: 'row',
