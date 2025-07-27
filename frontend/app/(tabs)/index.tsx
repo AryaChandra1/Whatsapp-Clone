@@ -253,6 +253,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#000000',
     letterSpacing: -0.5,
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   headerActions: {
     flexDirection: 'row',
