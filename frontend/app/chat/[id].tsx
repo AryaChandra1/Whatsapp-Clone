@@ -373,6 +373,7 @@ const styles = StyleSheet.create({
   },
   messagesContent: {
     paddingVertical: 8,
+    paddingTop: 24,
   },
   messageContainer: {
     marginVertical: 2,
