@@ -177,7 +177,9 @@ export default function CallsScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Recent</Text>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Recent</Text>
+          </View>
           {recentCalls.map(renderCallEntry)}
         </View>
 
