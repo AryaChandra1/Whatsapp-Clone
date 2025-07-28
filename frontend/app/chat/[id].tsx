@@ -357,8 +357,12 @@ const styles = StyleSheet.create({
   },
   chatBackground: {
     flex: 1,
-    backgroundColor: '#ECE5DD',
+    backgroundColor: '#E5DDD5',
     paddingTop: 88,
+  },
+  chatBackgroundImage: {
+    opacity: 0.06,
+    tintColor: '#075E54',
   },
   chatContainer: {
     flex: 1,
