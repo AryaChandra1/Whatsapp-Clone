@@ -186,27 +186,29 @@ export default function ChatScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#075E54" />
+    <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
       
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="chevron-back" size={28} color="#FFFFFF" />
+          <Ionicons name="chevron-back" size={28} color="#000000" />
         </TouchableOpacity>
+        
+        <Text style={styles.contactNumber}>336</Text>
+        
         <Image 
           source={{ uri: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde' }} 
           style={styles.profileImage} 
         />
         <View style={styles.headerInfo}>
           <Text style={styles.headerTitle}>{name}</Text>
-          <Text style={styles.headerSubtitle}>online</Text>
         </View>
         <View style={styles.headerActions}>
           <TouchableOpacity style={styles.headerButton}>
-            <Ionicons name="videocam" size={24} color="#FFFFFF" />
+            <Ionicons name="videocam" size={24} color="#000000" />
           </TouchableOpacity>
           <TouchableOpacity style={styles.headerButton}>
-            <Ionicons name="call" size={24} color="#FFFFFF" />
+            <Ionicons name="call" size={24} color="#000000" />
           </TouchableOpacity>
         </View>
       </View>
@@ -253,6 +255,9 @@ export default function ChatScreen() {
               <TouchableOpacity style={styles.cameraButton}>
                 <Ionicons name="camera-outline" size={24} color="#8E8E93" />
               </TouchableOpacity>
+              <TouchableOpacity style={styles.micButton}>
+                <Ionicons name="mic-outline" size={24} color="#8E8E93" />
+              </TouchableOpacity>
             </View>
             <TouchableOpacity 
               style={[styles.sendButton, (!inputText.trim() || sending) && styles.sendButtonDisabled]}
@@ -264,7 +269,7 @@ export default function ChatScreen() {
           </View>
         </KeyboardAvoidingView>
       </ImageBackground>
-    </SafeAreaView>
+    </View>
   );
 }
 
