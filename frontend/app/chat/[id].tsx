@@ -279,40 +279,48 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   header: {
-    backgroundColor: '#075E54',
-    paddingVertical: 8,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1000,
+    paddingTop: 44,
+    paddingBottom: 8,
     paddingHorizontal: 16,
     flexDirection: 'row',
     alignItems: 'center',
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    backdropFilter: 'blur(20px)',
   },
   backButton: {
     padding: 4,
     marginRight: 8,
   },
-  profileImage: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+  contactNumber: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#000000',
     marginRight: 12,
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
+  },
+  profileImage: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    marginRight: 8,
   },
   headerInfo: {
     flex: 1,
   },
   headerTitle: {
-    color: '#FFFFFF',
-    fontSize: 18,
+    color: '#000000',
+    fontSize: 16,
     fontWeight: '600',
     fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   headerSubtitle: {
-    color: '#FFFFFF',
-    fontSize: 13,
-    opacity: 0.8,
+    color: '#666666',
+    fontSize: 12,
     fontFamily: Platform.OS === 'ios' ? 'System' : 'sans-serif',
   },
   headerActions: {
@@ -321,13 +329,14 @@ const styles = StyleSheet.create({
   },
   headerButton: {
     padding: 8,
-    marginLeft: 8,
+    marginLeft: 4,
   },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ECE5DD',
+    paddingTop: 88,
   },
   loadingText: {
     fontSize: 16,
@@ -337,6 +346,7 @@ const styles = StyleSheet.create({
   chatBackground: {
     flex: 1,
     backgroundColor: '#ECE5DD',
+    paddingTop: 88,
   },
   chatContainer: {
     flex: 1,
@@ -459,7 +469,7 @@ const styles = StyleSheet.create({
   },
   attachButton: {
     padding: 4,
-    marginRight: 8,
+    marginRight: 4,
   },
   textInput: {
     flex: 1,
@@ -470,9 +480,13 @@ const styles = StyleSheet.create({
   },
   emojiButton: {
     padding: 4,
-    marginLeft: 8,
+    marginLeft: 4,
   },
   cameraButton: {
+    padding: 4,
+    marginLeft: 4,
+  },
+  micButton: {
     padding: 4,
     marginLeft: 4,
   },
