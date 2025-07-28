@@ -220,8 +220,10 @@ export default function ChatScreen() {
       </View>
 
       <ImageBackground 
-        source={{ uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==' }}
+        source={{ uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M4xDQAwCANBmVle2Q8FBSYjRXAg7nX3zkbOPdZaCyml0jk6dzZyds5aa/d1zn3PNd5sNpvNZrPZbDabzWaz2Ww2m81ms9lsNpvNZrPZbDabzWaz2Ww2m81ms9lsNpvNZvsFDAAA//8DABziBaoAAAAASUVORK5CYII=' }}
         style={styles.chatBackground}
+        resizeMode="repeat"
+        imageStyle={styles.chatBackgroundImage}
       >
         <KeyboardAvoidingView 
           style={styles.chatContainer}
