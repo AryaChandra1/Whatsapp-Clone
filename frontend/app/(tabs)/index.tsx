@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
   },
   filterPill: {
     backgroundColor: '#F2F2F7',
-    borderRadius: 12,
+    borderRadius: 18,
     paddingHorizontal: 12,
     paddingVertical: 2,
     marginRight: 8,
@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
   },
   unreadBadge: {
     backgroundColor: '#25D366',
-    borderRadius: 12,
+    borderRadius: 18,
     minWidth: 24,
     height: 24,
     justifyContent: 'center',
