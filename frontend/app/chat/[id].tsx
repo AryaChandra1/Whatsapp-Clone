@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.85)',
+    backgroundColor: 'transparent',
     borderBottomWidth: 0.5,
     borderBottomColor: 'rgba(0, 0, 0, 0.1)',
   },
