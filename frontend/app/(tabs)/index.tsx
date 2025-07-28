@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   chatListContent: {
-    paddingBottom: 20,
+    paddingBottom: 2,
   },
   chatItem: {
     flexDirection: 'row',
