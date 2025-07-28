@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 12,
+    paddingHorizontal: 16,
     height: 44,
   },
   searchIcon: {
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
   filterPill: {
     backgroundColor: '#F2F2F7',
     borderRadius: 18,
-    paddingHorizontal: 12,
+    paddingHorizontal: 16,
     paddingVertical: 2,
     marginRight: 8,
     flexGrow: 0,
