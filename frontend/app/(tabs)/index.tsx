@@ -291,6 +291,7 @@ const styles = StyleSheet.create({
   filtersContent: {
     flexDirection: 'row',
     paddingRight: 16,
+    alignItems: 'flex-start',
   },
   filterPill: {
     backgroundColor: '#F2F2F7',
