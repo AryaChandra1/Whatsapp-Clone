@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
   },
   chatList: {
     flex: 1,
-    marginTop: -8,
+    marginTop: -12,
   },
   chatListContent: {
     paddingBottom: 2,
