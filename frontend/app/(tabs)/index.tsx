@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
   },
   filtersContainer: {
     paddingHorizontal: 16,
-    marginBottom: 4,
+    marginBottom: 0,
   },
   filtersContent: {
     flexDirection: 'row',
