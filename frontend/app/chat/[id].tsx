@@ -210,6 +210,9 @@ export default function ChatScreen() {
           <TouchableOpacity style={styles.headerButton}>
             <Ionicons name="call" size={24} color="#000000" />
           </TouchableOpacity>
+          <TouchableOpacity style={styles.headerButton}>
+            <Ionicons name="ellipsis-vertical" size={24} color="#000000" />
+          </TouchableOpacity>
         </View>
       </View>
 
