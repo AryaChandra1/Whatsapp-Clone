@@ -159,11 +159,11 @@ export default function ChatScreen() {
 
   if (loading) {
     return (
-      <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
+      <View style={styles.container}>
+        <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-            <Ionicons name="chevron-back" size={28} color="#FFFFFF" />
+            <Ionicons name="chevron-back" size={28} color="#000000" />
           </TouchableOpacity>
           <View style={styles.headerInfo}>
             <Text style={styles.headerTitle}>{name}</Text>
@@ -171,17 +171,17 @@ export default function ChatScreen() {
           </View>
           <View style={styles.headerActions}>
             <TouchableOpacity style={styles.headerButton}>
-              <Ionicons name="videocam" size={24} color="#FFFFFF" />
+              <Ionicons name="videocam" size={24} color="#000000" />
             </TouchableOpacity>
             <TouchableOpacity style={styles.headerButton}>
-              <Ionicons name="call" size={24} color="#FFFFFF" />
+              <Ionicons name="call" size={24} color="#000000" />
             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.loadingContainer}>
           <Text style={styles.loadingText}>Loading conversation...</Text>
         </View>
-      </SafeAreaView>
+      </View>
     );
   }
 
