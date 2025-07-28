@@ -64,9 +64,34 @@ export default function ChatScreen() {
     if (!inputText.trim() || sending) return;
 
     const messageText = inputText.trim();
+    const tempUserMessageId = `temp-${Date.now()}`;
+    
+    // Create temporary user message to show immediately
+    const tempUserMessage: Message = {
+      id: tempUserMessageId,
+      chat_id: id as string,
+      sender_type: 'user',
+      sender_name: 'You',
+      content: messageText,
+      timestamp: new Date().toISOString(),
+      message_status: 'sending',
+      message_type: 'text'
+    };
+
+    // Add user message immediately to UI
+    setMessages(prev => [...prev, tempUserMessage]);
     setInputText('');
     setSending(true);
-    setTyping(true);
+    
+    // Scroll to bottom to show new message
+    setTimeout(() => {
+      flatListRef.current?.scrollToEnd({ animated: true });
+    }, 100);
+
+    // Show typing indicator after a brief delay
+    setTimeout(() => {
+      setTyping(true);
+    }, 500);
 
     try {
       const response = await fetch(`${EXPO_PUBLIC_BACKEND_URL}/api/chats/${id}/messages`, {
@@ -84,8 +109,13 @@ export default function ChatScreen() {
         throw new Error('Failed to send message');
       }
 
+      // Wait a moment to simulate natural typing delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Reload all messages to get the real user message and AI response
       await loadMessages();
       
+      // Scroll to bottom to show AI response
       setTimeout(() => {
         flatListRef.current?.scrollToEnd({ animated: true });
       }, 100);
@@ -93,6 +123,9 @@ export default function ChatScreen() {
     } catch (error) {
       console.error('Error sending message:', error);
       Alert.alert('Error', 'Failed to send message. Please try again.');
+      
+      // Remove the temporary message on error
+      setMessages(prev => prev.filter(msg => msg.id !== tempUserMessageId));
     } finally {
       setSending(false);
       setTyping(false);
