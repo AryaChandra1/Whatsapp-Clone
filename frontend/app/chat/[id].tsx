@@ -13,6 +13,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   ImageBackground,
+  BlurView,
 } from 'react-native';
 import { useLocalSearchParams, router } from 'expo-router';
 import Constants from 'expo-constants';
