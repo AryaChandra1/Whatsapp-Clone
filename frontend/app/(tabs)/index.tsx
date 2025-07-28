@@ -298,6 +298,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 2,
     marginRight: 8,
+    flexGrow: 0,
+    flexShrink: 0,
+    alignSelf: 'flex-start',
   },
   activeFilterPill: {
     backgroundColor: '#25D366',
