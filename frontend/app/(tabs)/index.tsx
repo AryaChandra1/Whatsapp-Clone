@@ -60,7 +60,7 @@ export default function ChatsScreen() {
   const loadChats = async () => {
     try {
       console.log('Backend URL:', BACKEND_URL);
-      const apiUrl = `${EXPO_PUBLIC_BACKEND_URL}/api/chats`;
+      const apiUrl = `${BACKEND_URL}/api/chats`;
       console.log('Fetching from:', apiUrl);
       
       const response = await fetch(apiUrl);
