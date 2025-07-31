@@ -107,7 +107,7 @@ export default function ChatScreen() {
     }, 500);
 
     try {
-      const response = await fetch(`${EXPO_PUBLIC_BACKEND_URL}/api/chats/${id}/messages`, {
+      const response = await fetch(`${BACKEND_URL}/api/chats/${id}/messages`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
