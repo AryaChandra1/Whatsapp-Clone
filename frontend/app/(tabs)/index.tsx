@@ -24,10 +24,17 @@ const EXPO_PUBLIC_BACKEND_URL = Constants.expoConfig?.extra?.EXPO_PUBLIC_BACKEND
 const getBackendUrl = () => {
   // Check if we're running in web mode
   const isWeb = Platform.OS === 'web';
+  console.log('Platform.OS:', Platform.OS);
+  console.log('isWeb:', isWeb);
+  console.log('EXPO_PUBLIC_BACKEND_URL:', EXPO_PUBLIC_BACKEND_URL);
+  console.log('includes stage-preview:', EXPO_PUBLIC_BACKEND_URL?.includes('stage-preview.emergentagent.com'));
+  
   if (isWeb && EXPO_PUBLIC_BACKEND_URL?.includes('stage-preview.emergentagent.com')) {
     // Use localhost for API calls when in web dev mode
+    console.log('Using localhost:8001 for API calls');
     return 'http://localhost:8001';
   }
+  console.log('Using original backend URL');
   return EXPO_PUBLIC_BACKEND_URL;
 };
 
