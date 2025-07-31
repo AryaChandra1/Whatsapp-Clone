@@ -17,8 +17,9 @@ import {
 import { router } from 'expo-router';
 import Constants from 'expo-constants';
 import { Ionicons } from '@expo/vector-icons';
+import axios from 'axios';
 
-const EXPO_PUBLIC_BACKEND_URL = Constants.expoConfig?.extra?.EXPO_PUBLIC_BACKEND_URL || process.env.EXPO_PUBLIC_BACKEND_URL;
+const EXPO_PUBLIC_BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
 // For development, if running in web mode, use localhost directly
 const getBackendUrl = () => {
@@ -38,7 +39,7 @@ const getBackendUrl = () => {
   return EXPO_PUBLIC_BACKEND_URL;
 };
 
-const BACKEND_URL = getBackendUrl();
+const BACKEND_URL = EXPO_PUBLIC_BACKEND_URL;
 
 interface Chat {
   id: string;
@@ -70,12 +71,12 @@ export default function ChatsScreen() {
       const apiUrl = `${BACKEND_URL}/api/chats`;
       console.log('Fetching from:', apiUrl);
       
-      const response = await fetch(apiUrl);
-      if (!response.ok) {
-        console.error('Response not OK:', response.status, response.statusText);
-        throw new Error(`Failed to load chats: ${response.status} ${response.statusText}`);
-      }
-      const chatsData = await response.json();
+      const response = await axios.get(apiUrl);
+      // if (!response.ok) {
+      //   console.error('Response not OK:', response.status, response.statusText);
+      //   throw new Error(`Failed to load chats: ${response.status} ${response.statusText}`);
+      // }
+      const chatsData = response.data;
       console.log('Loaded chats:', chatsData.length);
       setChats(chatsData);
     } catch (error) {
@@ -315,6 +316,7 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 16,
     marginBottom: 8,
+    maxHeight: 70
   },
   filtersContent: {
     flexDirection: 'row',
@@ -327,8 +329,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     marginRight: 8,
-    flexGrow: 0,
-    flexShrink: 0,
+    // flexGrow: 0,
+    // flexShrink: 1,
     alignSelf: 'flex-start',
   },
   activeFilterPill: {
@@ -356,7 +358,6 @@ const styles = StyleSheet.create({
   },
   chatList: {
     flex: 1,
-    flexGrow: 0,
     flexShrink: 1,
     flexBasis: 'auto',
     marginTop: 0,

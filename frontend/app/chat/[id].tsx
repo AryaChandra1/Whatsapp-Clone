@@ -17,8 +17,9 @@ import {
 import { useLocalSearchParams, router } from 'expo-router';
 import Constants from 'expo-constants';
 import { Ionicons } from '@expo/vector-icons';
+import axios from 'axios';
 
-const EXPO_PUBLIC_BACKEND_URL = Constants.expoConfig?.extra?.EXPO_PUBLIC_BACKEND_URL || process.env.EXPO_PUBLIC_BACKEND_URL;
+const EXPO_PUBLIC_BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
 // For development, if running in web mode, use localhost directly
 const getBackendUrl = () => {
@@ -31,7 +32,7 @@ const getBackendUrl = () => {
   return EXPO_PUBLIC_BACKEND_URL;
 };
 
-const BACKEND_URL = getBackendUrl();
+const BACKEND_URL = EXPO_PUBLIC_BACKEND_URL;
 
 interface Message {
   id: string;
