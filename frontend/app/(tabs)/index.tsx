@@ -46,15 +46,21 @@ export default function ChatsScreen() {
 
   const loadChats = async () => {
     try {
-      const response = await fetch(`${EXPO_PUBLIC_BACKEND_URL}/api/chats`);
+      console.log('Backend URL:', EXPO_PUBLIC_BACKEND_URL);
+      const apiUrl = `${EXPO_PUBLIC_BACKEND_URL}/api/chats`;
+      console.log('Fetching from:', apiUrl);
+      
+      const response = await fetch(apiUrl);
       if (!response.ok) {
-        throw new Error('Failed to load chats');
+        console.error('Response not OK:', response.status, response.statusText);
+        throw new Error(`Failed to load chats: ${response.status} ${response.statusText}`);
       }
       const chatsData = await response.json();
+      console.log('Loaded chats:', chatsData.length);
       setChats(chatsData);
     } catch (error) {
       console.error('Error loading chats:', error);
-      Alert.alert('Error', 'Failed to load chats. Please try again.');
+      Alert.alert('Error', `Failed to load chats: ${error.message}. Please try again.`);
     } finally {
       setLoading(false);
     }
