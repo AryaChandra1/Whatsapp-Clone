@@ -20,6 +20,19 @@ import { Ionicons } from '@expo/vector-icons';
 
 const EXPO_PUBLIC_BACKEND_URL = Constants.expoConfig?.extra?.EXPO_PUBLIC_BACKEND_URL || process.env.EXPO_PUBLIC_BACKEND_URL;
 
+// For development, if running in web mode, use localhost directly
+const getBackendUrl = () => {
+  // Check if we're running in web mode
+  const isWeb = Platform.OS === 'web';
+  if (isWeb && EXPO_PUBLIC_BACKEND_URL?.includes('stage-preview.emergentagent.com')) {
+    // Use localhost for API calls when in web dev mode
+    return 'http://localhost:8001';
+  }
+  return EXPO_PUBLIC_BACKEND_URL;
+};
+
+const BACKEND_URL = getBackendUrl();
+
 interface Chat {
   id: string;
   ai_personality: string;
