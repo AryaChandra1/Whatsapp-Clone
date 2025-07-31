@@ -59,7 +59,7 @@ export default function ChatScreen() {
 
   const loadMessages = async () => {
     try {
-      const response = await fetch(`${EXPO_PUBLIC_BACKEND_URL}/api/chats/${id}/messages`);
+      const response = await fetch(`${BACKEND_URL}/api/chats/${id}/messages`);
       if (!response.ok) {
         throw new Error('Failed to load messages');
       }
